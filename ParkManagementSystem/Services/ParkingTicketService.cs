@@ -73,6 +73,7 @@ namespace ParkManagementSystem.Services
 
         public async Task<PackingRules> AddParkingRules(PackingRules model)
         {
+           // var results = _context.PackingRules.AsQueryable();
             var result = await _context.AddAsync<PackingRules>(model);
             await _context.SaveChangesAsync();
             return result.Entity;
