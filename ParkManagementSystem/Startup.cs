@@ -29,8 +29,7 @@ namespace ParkManagementSystem
             services.AddControllers();
             services.AddScoped<IParkingTicketService, ParkingTicketService>();
 
-            var connectionString = "Data source=DESKTOP-31VEGUO\\SQLEXPRESS;Database=DemoBankAppDb;Trusted_Connection=true";
-            var connectionString2 = "Data source=SQL5091.site4now.net;Database=db_a483f5_usertest;User Id=db_a483f5_usertest_admin;Password=userTester.1";
+            var connectionString = "Data source=SQL5091.site4now.net;Database=db_a483f5_usertest;User Id=db_a483f5_usertest_admin;Password=userTester.1";
             services.AddDbContext<DataBaseContext>((option) =>
             {
                 option.UseSqlServer(connectionString, b => b.MigrationsAssembly("ParkManagementSystem"));
